@@ -52,11 +52,10 @@ $request = array(
   "CURRENCY" => "USD",
   "CREATESECURETOKEN" => "Y",
   "SECURETOKENID" => uniqid('MySecTokenID-'), //Should be unique, never used before
-  "RETURNURL" => "http://localhost.payflow.me/returnurl.php",
-  "CANCELURL" => "http://localhost.payflow.me/cancelurl.php",
-  "ERRORURL" => "http://localhost.payflow.me/errorurl.php",
-  "SILENTPOSTURL" => "https://b39d-2405-9800-b860-a47-5938-e16e-dde5-29a5.ngrok-free.app/silentpost.php",
-
+  "RETURNURL" => "https://dev-test.awardregister.com/returnurl.php",
+  "CANCELURL" => "https://dev-test.awardregister.com/cancelurl.php",
+  "ERRORURL" => "https://dev-test.awardregister.com/errorurl.php",
+  "SILENTPOSTURL" => "https://dev-test.awardregister.com/silentpost.php",
 // In practice you'd collect billing and shipping information with your own form,
 // then request a secure token and display the payment iframe.
 // --> See page 7 of https://cms.paypal.com/cms_content/US/en_US/files/developer/Embedded_Checkout_Design_Guide.pdf

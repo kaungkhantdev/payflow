@@ -2,37 +2,42 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// Get raw POST data from the input stream (this works only for POST requests)
+// Get raw POST data from the input stream
 $rawData = file_get_contents("php://input");
 
 // Capture GET parameters
 $getData = $_GET;
 
-// Capture POST data (if available)
+// Capture POST data
 $postData = $_POST;
 
 // Define the file path where you want to save the data
-$file_path = 'received_data.txt';
+$file_path = 'received_data.php';
 
-// Check if raw POST data was received and save it
+// Initialize the content variable
+$content = "<?php\n\n/* Received Data Log */\n\n";
+
+// Check if raw POST data was received
 if (!empty($rawData)) {
-    file_put_contents($file_path, "Received Raw Data: " . $rawData . "\n", FILE_APPEND);
+    $content .= "// Raw Data:\n";
+    $content .= "echo 'Raw Data: " . addslashes($rawData) . "';\n";
 }
 
-// Check if GET data was received and save it
+// Check if GET data was received
 if (!empty($getData)) {
-    file_put_contents($file_path, "Received GET Data: " . json_encode($getData) . "\n", FILE_APPEND);
+    $content .= "// GET Data:\n";
+    $content .= "echo 'GET Data: " . addslashes(json_encode($getData)) . "';\n";
 }
 
-// Check if POST data was received and save it
+// Check if POST data was received
 if (!empty($postData)) {
-    file_put_contents($file_path, "Received POST Data: " . json_encode($postData) . "\n", FILE_APPEND);
+    $content .= "// POST Data:\n";
+    $content .= "echo 'POST Data: " . addslashes(json_encode($postData)) . "';\n";
 }
 
-// Check if no data was received
-if (empty($rawData) && empty($getData) && empty($postData)) {
-    echo "No data received.";
-} else {
-    echo "The received data has been saved to the file.";
-}
+// Save the content to the PHP file
+file_put_contents($file_path, $content);
+
+// Display a success message
+echo "The received data has been saved to received_data.php";
 ?>
