@@ -17,22 +17,24 @@ $file_path = 'received_data.php';
 // Initialize the content variable
 $content = "<?php\n\n/* Received Data Log */\n\n";
 
-// Check if raw POST data was received
+// Section for raw POST data
 if (!empty($rawData)) {
-    $content .= "// Raw Data:\n";
-    $content .= "echo 'Raw Data: " . addslashes($rawData) . "';\n";
+    $content .= "/* Raw Data */\n";
+    $content .= "echo 'Raw Data: ' . htmlspecialchars('" . addslashes($rawData) . "') . \"<br>\";\n\n";
 }
 
-// Check if GET data was received
+// Section for GET data
 if (!empty($getData)) {
-    $content .= "// GET Data:\n";
-    $content .= "echo 'GET Data: " . addslashes(json_encode($getData)) . "';\n";
+    $content .= "/* GET Data */\n";
+    $content .= "\$getData = " . var_export($getData, true) . ";\n";
+    $content .= "echo 'GET Data: ' . htmlspecialchars(json_encode(\$getData, JSON_PRETTY_PRINT)) . \"<br>\";\n\n";
 }
 
-// Check if POST data was received
+// Section for POST data
 if (!empty($postData)) {
-    $content .= "// POST Data:\n";
-    $content .= "echo 'POST Data: " . addslashes(json_encode($postData)) . "';\n";
+    $content .= "/* POST Data */\n";
+    $content .= "\$postData = " . var_export($postData, true) . ";\n";
+    $content .= "echo 'POST Data: ' . htmlspecialchars(json_encode(\$postData, JSON_PRETTY_PRINT)) . \"<br>\";\n\n";
 }
 
 // Save the content to the PHP file
