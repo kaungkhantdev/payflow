@@ -1,0 +1,10 @@
+c:\vsprojects\PayPal Payments Advanced Demo\PayPal Payments Advanced Demo\bin\PayPal Payments Advanced Demo.dll
+c:\vsprojects\PayPal Payments Advanced Demo\PayPal Payments Advanced Demo\bin\PayPal Payments Advanced Demo.pdb
+c:\vsprojects\PayPal Payments Advanced Demo\PayPal Payments Advanced Demo\obj\Debug\ResolveAssemblyReference.cache
+c:\vsprojects\PayPal Payments Advanced Demo\PayPal Payments Advanced Demo\obj\Debug\PayPal Payments Advanced Demo.dll
+c:\vsprojects\PayPal Payments Advanced Demo\PayPal Payments Advanced Demo\obj\Debug\PayPal Payments Advanced Demo.pdb
+C:\Users\palexander\Desktop\ASP.net C#\PayPal Payments Advanced Demo\bin\PayPal Payments Advanced Demo.dll
+C:\Users\palexander\Desktop\ASP.net C#\PayPal Payments Advanced Demo\bin\PayPal Payments Advanced Demo.pdb
+C:\Users\palexander\Desktop\ASP.net C#\PayPal Payments Advanced Demo\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\palexander\Desktop\ASP.net C#\PayPal Payments Advanced Demo\obj\Debug\PayPal Payments Advanced Demo.dll
+C:\Users\palexander\Desktop\ASP.net C#\PayPal Payments Advanced Demo\obj\Debug\PayPal Payments Advanced Demo.pdb
